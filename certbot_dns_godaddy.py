@@ -20,6 +20,8 @@ class Authenticator(dns_common_lexicon.LexiconDNSAuthenticator):
 
     description = ('Obtain certificates using a DNS TXT record (if you are '
                    'using GoDaddy for DNS).')
+
+    ttl = 600
     
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
